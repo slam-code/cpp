@@ -1,0 +1,12 @@
+mutex 源码剖析：
+http://blog.csdn.net/hengyunabc/article/details/33336795
+thread源码剖析：
+http://blog.csdn.net/hengyunabc/article/details/33311019
+C++11中once_flag，call_once实现分析：
+http://blog.csdn.net/hengyunabc/article/details/33031465
+C++中虚函数(virtual function)到底有多慢 ：
+http://blog.csdn.net/hengyunabc/article/details/7461919
+C++11 并发指南六(atomic 类型详解三 std::atomic (续)):
+http://www.cnblogs.com/haippy/p/3304556.html
+
+http://www.cnblogs.com/haippy/tag/%E5%A4%9A%E7%BA%BF%E7%A8%8B/
