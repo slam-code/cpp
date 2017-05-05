@@ -58,25 +58,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="listing_3.11.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/listing_3.11.cpp">
+      <file leaf-file-name="listing_3.13.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/listing_3.13.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state relative-caret-position="1045">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listing_3.12.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/listing_3.12.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
+                <element signature="e#1#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,7 +80,6 @@
       <list>
         <option value="$PROJECT_DIR$/listing_2.5.cpp" />
         <option value="$PROJECT_DIR$/listing_3.10.cpp" />
-        <option value="$PROJECT_DIR$/listing_3.13.cpp" />
         <option value="$PROJECT_DIR$/listing_4.1.cpp" />
         <option value="$PROJECT_DIR$/listing_4.2.cpp" />
         <option value="$PROJECT_DIR$/listing_4.6.cpp" />
@@ -130,8 +117,9 @@
         <option value="$PROJECT_DIR$/listing_3.7.cpp" />
         <option value="$PROJECT_DIR$/listing_3.8.cpp" />
         <option value="$PROJECT_DIR$/listing_3.9.cpp" />
-        <option value="$PROJECT_DIR$/listing_3.12.cpp" />
         <option value="$PROJECT_DIR$/listing_3.11.cpp" />
+        <option value="$PROJECT_DIR$/listing_3.12.cpp" />
+        <option value="$PROJECT_DIR$/listing_3.13.cpp" />
       </list>
     </option>
   </component>
@@ -469,20 +457,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/listing_4.4.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-609">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_4.1.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/v1/future">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-931">
@@ -852,21 +826,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/listing_3.12.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/listing_3.10.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_3.12.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -876,6 +850,24 @@
           <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/boost/thread/shared_mutex.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_3.13.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
