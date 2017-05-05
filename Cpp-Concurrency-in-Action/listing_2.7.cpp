@@ -8,7 +8,7 @@ void do_work(unsigned id)
     printf("id= %d ,",id);
 }
 
-void f()
+void f()//量产线程,等待它们结束.
 {
     std::vector<std::thread> threads;
     for(unsigned i=0;i<20;++i)

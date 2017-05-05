@@ -30,7 +30,8 @@ T parallel_accumulate(Iterator first,Iterator last,T init)
         std::thread::hardware_concurrency();
 
     unsigned long const num_threads=
-        std::min(hardware_threads!=0?hardware_threads:2,max_threads);//hardware_threads:2即当hardware_concurrency()返回0时选择2.
+        std::min(hardware_threads!=0?hardware_threads:2,max_threads);
+    //hardware_threads:2即当hardware_concurrency()返回0时选择2.
 
     unsigned long const block_size=length/num_threads;
 
@@ -65,3 +66,5 @@ int main()
     int sum=parallel_accumulate(vi.begin(),vi.end(),5);
     std::cout<<"sum="<<sum<<std::endl;
 }
+/*	std::thread::hardware_concurrency()函数将返回能同时并发在一个程序中的线程数量。
+ * 例如,多核系统中,返回值可以是CPU核芯的数量。*/

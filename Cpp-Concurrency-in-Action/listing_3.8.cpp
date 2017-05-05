@@ -2,7 +2,7 @@
 #include <stdexcept>
 #include <climits>
 
-class hierarchical_mutex
+class hierarchical_mutex//	简单的层级互斥量实现
 {
     std::mutex internal_mutex;
     unsigned long const hierarchy_value;
@@ -58,3 +58,8 @@ int main()
 
 
 }
+/*
+重点是使用了thread_local的值来代表当前线程的层级值:
+this_thread_hierarchy_value1。它被初始化为最大值,所以最初所有线程都能被锁住。因
+为其声明中有thread_local,所以每个线程都有其拷贝副本,这样线程中变量状态完全独立,
+当从另一个线程进行读取时,变量的状态也完全独立。*/

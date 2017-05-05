@@ -45,6 +45,40 @@ new (pInstance) Singleton; // Step 2
 
 遗憾的是编译器并不是严格按照上面的顺序来执行的。可以交换2和3.
  * */
+
+
+
+
+
+
+
+
+
+
+
+
+std::shared_ptr<some_resource>	resource_ptr;
+std::once_flag	resource_flag;		//	1
+void	init_resource()
+{
+    resource_ptr.reset(new	some_resource);
+}
+void	foo()
+{
+    std::call_once(resource_flag,init_resource);		//	可以完整的进行一次初始化
+    resource_ptr->do_something();
+}
+/*
+C++标准委员会也认为条件竞争的处理很重要,所以C++标准库提供了std::once_flag	 和 	std::call_once 来处理这种情况。
+ 比起锁住互斥量,并显式的检查指针,每个线程只需要使用std::call_once ,在std::call_once的结束时,就能安全的知道指
+针已经被其他的线程初始化了。使用std::call_once比显式使用互斥量消耗的资源更少,特别是当初始化完成后。
+ 下面的例子展示了与清单3.11中的同样的操作,这里使用std::call_once。
+ 在这种情况下,初始化通过调用函数完成,同样这样操作使用类中的函
+数操作符来实现同样很简单。如同大多数在标准库中的函数一样,或作为函数被调用,或作
+为参数被传递, 	std::call_once	 可以和任何函数或可调用对象一起使用。
+ */
+
+
 int main()
 {
     std::cout<<" 3.11 ok ";
