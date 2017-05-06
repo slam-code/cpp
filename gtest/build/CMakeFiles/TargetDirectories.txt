@@ -1,4 +1,0 @@
-/home/shen/ClionProjects/gtest/build/CMakeFiles/rebuild_cache.dir
-/home/shen/ClionProjects/gtest/build/CMakeFiles/edit_cache.dir
-/home/shen/ClionProjects/gtest/build/CMakeFiles/gtest_main.dir
-/home/shen/ClionProjects/gtest/build/CMakeFiles/gtest.dir

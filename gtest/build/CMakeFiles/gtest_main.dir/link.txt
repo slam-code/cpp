@@ -1,1 +1,0 @@
-/home/shen/anaconda2/bin/c++    -lpthread -std=c++11 -w -fpermissive   CMakeFiles/gtest_main.dir/gtest_main.o  -o gtest_main -rdynamic libgtest.a 

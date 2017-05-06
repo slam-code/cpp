@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtest_gtest.a  CMakeFiles/test_gtest.dir/sample1_unittest.cpp.o CMakeFiles/test_gtest.dir/sdy_sample.cpp.o CMakeFiles/test_gtest.dir/sample1.cpp.o
-/usr/bin/ranlib libtest_gtest.a

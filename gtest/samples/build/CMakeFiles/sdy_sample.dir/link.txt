@@ -1,1 +1,0 @@
-clang++    -lpthread -std=c++11 -w -fpermissive   CMakeFiles/sdy_sample.dir/sdy_sample.cpp.o  -o sdy_sample -rdynamic libgtest.a 
