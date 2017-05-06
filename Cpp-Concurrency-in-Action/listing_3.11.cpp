@@ -25,6 +25,7 @@ void foo()
     lk.unlock();
     resource_ptr->do_something();
 /*http://blog.csdn.net/cncnlg/article/details/46635095
+ * http://dreamrunner.org/blog/2014/06/22/double-checked-locking-works-in-c-plus-plus-11/
 这个版本有什么问题呢？
 成本太高，每个调用都去获取锁，单例创建好之后，其实已经没有必要获取锁了，
 并发情况下会导致其他线程因等待锁而被系统休眠，成本太高了。

@@ -4,7 +4,7 @@
 #include <memory>
 
 template<typename T>
-class threadsafe_queue
+class threadsafe_queue///使用条件变量的线程安全队列(完整版)
 {
 private:
     mutable std::mutex mut;
@@ -13,7 +13,7 @@ private:
 public:
     threadsafe_queue()
     {}
-    threadsafe_queue(threadsafe_queue const& other)
+    threadsafe_queue(threadsafe_queue const& other)///传入拷贝构造函数的other形参是一个const引用
     {
         std::lock_guard<std::mutex> lk(other.mut);
         data_queue=other.data_queue;
@@ -25,7 +25,9 @@ public:
         data_queue.push(new_value);
         data_cond.notify_one();
     }
+/*当新的数据准备完成,调用notify_one()将会触发一个(其他线程)正在执行wait()的线程,去检查条件和wait()函数的返回状态*/
 
+/*通过条件变量调用notify_all()成员函数,就是全部线程在都去执行wait()(检查他们等待的条件是否满足)*/
     void wait_and_pop(T& value)
     {
         std::unique_lock<std::mutex> lk(mut);
@@ -46,7 +48,7 @@ public:
     bool try_pop(T& value)
     {
         std::lock_guard<std::mutex> lk(mut);
-        if(data_queue.empty)
+        if(data_queue.empty())
             return false;
         value=data_queue.front();
         data_queue.pop();
@@ -62,7 +64,7 @@ public:
         return res;
     }
 
-    bool empty() const
+    bool empty() const///empty()是一个const成员函数
     {
         std::lock_guard<std::mutex> lk(mut);
         return data_queue.empty();

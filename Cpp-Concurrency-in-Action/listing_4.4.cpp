@@ -2,12 +2,12 @@
 #include <condition_variable>
 #include <queue>
 template<typename T>
-class threadsafe_queue
+class threadsafe_queue///使用条件变量构建线程安全队列,简版
 {
 private:
     std::mutex mut;
     std::queue<T> data_queue;
-    std::condition_variable data_cond;
+    std::condition_variable data_cond;///线程队列的实例中包含有互斥量和条件变量
 public:
     void push(T new_value)
     {

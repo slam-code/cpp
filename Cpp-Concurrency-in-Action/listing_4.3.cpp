@@ -1,6 +1,6 @@
 #include <memory>
 template<typename T>
-class threadsafe_queue
+class threadsafe_queue//线程安全队列的接口
 {
 public:
     threadsafe_queue();

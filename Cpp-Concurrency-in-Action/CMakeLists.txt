@@ -3,11 +3,13 @@ cmake_minimum_required(VERSION 3.6)
 
 project(Cpp_Concurrency_in_Action)
 #SET (CMAKE_C_COMPILER  "/usr/bin/clang")
-SET(CMAKE_CXX_COMPILER "clang++")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -stdlib=libc++ -std=c++14  -lc++abi  -lboost_thread -lboost_system ")
+#SET(CMAKE_CXX_COMPILER "clang++")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -stdlib=libc++ -std=c++14  -lc++abi  -lboost_thread -lboost_system ")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  --std=c++14 -lpthread  ")
 
 set(SOURCE_FILES
         #listing_1.1.cpp
+        listing_1.2.cpp
         #listing_10.1.cpp
         # listing_2.1.cpp
         #listing_2.2.cpp
