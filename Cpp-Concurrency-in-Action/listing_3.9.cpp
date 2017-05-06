@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 using namespace std;
+///std::lock_guard,std::unique_lock和std::shared_lock类模板在构造时是否加锁是可选的，C++11提供了3种加锁策略。
 
 class some_big_object
 {};
@@ -21,12 +22,9 @@ public:
     {
         if(&lhs==&rhs)
             return;
-        ///std::lock_guard、std::unique_lock和std::shared_lock类模板在构造时是否加锁是可选的，C++11提供了3种加锁策略。
-        ///unique_lock是write lock。被锁后不允许其他线程执行被shared_lock或unique_lock的代码。
-        /// 在写操作时，一般用这个，可以同时限制unique_lock的写和share_lock的读。
+///unique_lock是write lock。被锁后不允许其他线程执行被shared_lock或unique_lock的代码。
         std::unique_lock<std::mutex> lock_a(lhs.m,std::defer_lock);
-        //	std::defer_lock_t	不请求加锁.因此lock_a可被unique_lock的lock()，
-        // try_lock，unlock()函数获取,或者传递给 std::lock()
+//std::defer_lock不请求加锁.因此lock_b可被unique_lock的lock(),try_lock,unlock()函数获取,或者传递给 std::lock()
         std::unique_lock<std::mutex> lock_b(rhs.m,std::defer_lock);
         std::lock(lock_a,lock_b);
         swap(lhs.some_detail,rhs.some_detail);
@@ -51,11 +49,11 @@ void progress_data(){
 };
 
 /*
-std::unique_lock的灵活性允许对象在销毁之前放弃其拥有的锁。可以使用unlock()来做这件事,如同一个互斥量:
- std::unique_lock 的成员函数(lock,unlock)提供类似于锁定和解锁互斥量的功能。
+std::unique_lock的灵活性允许对象在销毁之前放弃其拥有的锁。可以使用unlock()来做这件事.
+ 如同一个互斥量: std::unique_lock 的成员函数(lock,unlock)提供类似于锁定和解锁互斥量的功能。
  std::unique_lock对象在销毁前释放锁的能力使得：当锁没有必要在持有的时候,可以在
 特定的代码分支对其进行选择性的释放。这对于应用性能来说很重要,因为持有锁的时间增
-加会导致性能下降,其他线程会等待这个锁的释放,避免超越操作。
+加会导致性能下降,其他线程会等待这个锁的释放。
  */
 /*void get_and_process_data()
 {
@@ -70,13 +68,11 @@ int main()
 /*
 当代码已经能规避死锁, 	std::lock()	 和 	std::lack_guard	 能组成简单的锁覆盖大多数情况,
 但是有时需要更多的灵活性。在这些情况,可以使用标准库提供的std::unique_lock模板。
-如 	std::lock_guard	 ,这是一个参数化的互斥量模板类,并且它提供很多RAII类型锁用来管
-理 	std::lock_guard	 类型,可以让代码更加灵活。
 */
 
 
 /*
-try_to_lock:Attempt to lock on construction by calling member try_lock
+试图上锁:try_to_lock:Attempt to lock on construction by calling member try_lock
             The object manages m, and attempts to lock it (without blocking) by calling m.try_lock().
 
 没有上锁:defer_lock:Do not lock on construction (and assume it is not already locked by thread)

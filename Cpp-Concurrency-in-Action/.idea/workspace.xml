@@ -12,33 +12,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6750e60b-2bab-4f53-8405-986c2a9535ee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_2.5.cpp" afterPath="$PROJECT_DIR$/listing_2.5.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_4.7.cpp" afterPath="$PROJECT_DIR$/listing_4.7.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.5.cpp" afterPath="$PROJECT_DIR$/listing_3.5.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_2.7.cpp" afterPath="$PROJECT_DIR$/listing_2.7.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_5.1.cpp" afterPath="$PROJECT_DIR$/listing_5.1.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.2.cpp" afterPath="$PROJECT_DIR$/listing_3.2.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_2.2.cpp" afterPath="$PROJECT_DIR$/listing_2.2.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.12.cpp" afterPath="$PROJECT_DIR$/listing_3.12.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_4.8.cpp" afterPath="$PROJECT_DIR$/listing_4.8.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_5.3.cpp" afterPath="$PROJECT_DIR$/listing_5.3.cpp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/listing_2.8.cpp" afterPath="$PROJECT_DIR$/listing_2.8_id.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_5.2.cpp" afterPath="$PROJECT_DIR$/listing_5.2.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.11.cpp" afterPath="$PROJECT_DIR$/listing_3.11.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.6.cpp" afterPath="$PROJECT_DIR$/listing_3.6.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.13.cpp" afterPath="$PROJECT_DIR$/listing_3.13.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_2.2.cpp" afterPath="$PROJECT_DIR$/listing_2.2.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_2.5.cpp" afterPath="$PROJECT_DIR$/listing_2.5.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/listing_2.8.cpp" afterPath="$PROJECT_DIR$/listing_2.8_id.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.10.cpp" afterPath="$PROJECT_DIR$/listing_3.10.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_4.8.cpp" afterPath="$PROJECT_DIR$/listing_4.8.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.4.cpp" afterPath="$PROJECT_DIR$/listing_3.4.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.11.cpp" afterPath="$PROJECT_DIR$/listing_3.11.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_5.1.cpp" afterPath="$PROJECT_DIR$/listing_5.1.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_4.6.cpp" afterPath="$PROJECT_DIR$/listing_4.6.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_4.1.cpp" afterPath="$PROJECT_DIR$/listing_4.1.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.7.cpp" afterPath="$PROJECT_DIR$/listing_3.7.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_2.3.cpp" afterPath="$PROJECT_DIR$/listing_2.3.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.8.cpp" afterPath="$PROJECT_DIR$/listing_3.8.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_4.2.cpp" afterPath="$PROJECT_DIR$/listing_4.2.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.3.cpp" afterPath="$PROJECT_DIR$/listing_3.3.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.10.cpp" afterPath="$PROJECT_DIR$/listing_3.10.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.9.cpp" afterPath="$PROJECT_DIR$/listing_3.9.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_4.2.cpp" afterPath="$PROJECT_DIR$/listing_4.2.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_2.7.cpp" afterPath="$PROJECT_DIR$/listing_2.7.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.8.cpp" afterPath="$PROJECT_DIR$/listing_3.8.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.2.cpp" afterPath="$PROJECT_DIR$/listing_3.2.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_2.6.cpp" afterPath="$PROJECT_DIR$/listing_2.6.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.4.cpp" afterPath="$PROJECT_DIR$/listing_3.4.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.12.cpp" afterPath="$PROJECT_DIR$/listing_3.12.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.3.cpp" afterPath="$PROJECT_DIR$/listing_3.3.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.7.cpp" afterPath="$PROJECT_DIR$/listing_3.7.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.6.cpp" afterPath="$PROJECT_DIR$/listing_3.6.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_2.1.cpp" afterPath="$PROJECT_DIR$/listing_2.1.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_5.3.cpp" afterPath="$PROJECT_DIR$/listing_5.3.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_2.3.cpp" afterPath="$PROJECT_DIR$/listing_2.3.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_4.7.cpp" afterPath="$PROJECT_DIR$/listing_4.7.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_3.5.cpp" afterPath="$PROJECT_DIR$/listing_3.5.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listing_5.2.cpp" afterPath="$PROJECT_DIR$/listing_5.2.cpp" />
     </list>
     <ignored path="Cpp-Concurrency-in-Action.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,20 +57,7 @@
     <favorites_list name="Cpp-Concurrency-in-Action" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="listing_3.13.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/listing_3.13.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1045">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-              <folding>
-                <element signature="e#1#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -101,25 +88,25 @@
         <option value="$PROJECT_DIR$/笔记.txt" />
         <option value="$PROJECT_DIR$/listing_1.1.cpp" />
         <option value="$PROJECT_DIR$/listing_2.1.cpp" />
-        <option value="$PROJECT_DIR$/listing_2.2.cpp" />
-        <option value="$PROJECT_DIR$/listing_2.3.cpp" />
-        <option value="$PROJECT_DIR$/listing_2.4.cpp" />
         <option value="$PROJECT_DIR$/listing_2.6.cpp" />
         <option value="$PROJECT_DIR$/listing_2.7.cpp" />
         <option value="$PROJECT_DIR$/listing_2.8.cpp" />
         <option value="$PROJECT_DIR$/listing_2.8_id.cpp" />
         <option value="$PROJECT_DIR$/listing_3.1.cpp" />
         <option value="$PROJECT_DIR$/listing_3.2.cpp" />
-        <option value="$PROJECT_DIR$/listing_3.3.cpp" />
         <option value="$PROJECT_DIR$/listing_3.4.cpp" />
+        <option value="$PROJECT_DIR$/listing_3.7.cpp" />
+        <option value="$PROJECT_DIR$/listing_3.13.cpp" />
+        <option value="$PROJECT_DIR$/listing_2.2.cpp" />
+        <option value="$PROJECT_DIR$/listing_2.3.cpp" />
+        <option value="$PROJECT_DIR$/listing_2.4.cpp" />
+        <option value="$PROJECT_DIR$/listing_3.3.cpp" />
         <option value="$PROJECT_DIR$/listing_3.5.cpp" />
         <option value="$PROJECT_DIR$/listing_3.6.cpp" />
-        <option value="$PROJECT_DIR$/listing_3.7.cpp" />
         <option value="$PROJECT_DIR$/listing_3.8.cpp" />
         <option value="$PROJECT_DIR$/listing_3.9.cpp" />
         <option value="$PROJECT_DIR$/listing_3.11.cpp" />
         <option value="$PROJECT_DIR$/listing_3.12.cpp" />
-        <option value="$PROJECT_DIR$/listing_3.13.cpp" />
       </list>
     </option>
   </component>
@@ -397,9 +384,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13036303" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13036303" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32747254" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -457,20 +444,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/include/c++/v1/future">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-931">
-          <caret line="2355" column="0" selection-start-line="2355" selection-start-column="0" selection-end-line="2355" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_4.7.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/listing_4.8.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -608,9 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -618,7 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -626,67 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
           <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_1.1.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#19#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_2.2.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_2.1.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_2.6.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-695">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#17#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_2.5.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-86">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_2.4.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_2.3.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,61 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="556" column="5" selection-start-line="556" selection-start-column="5" selection-end-line="556" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_2.8.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="47" column="51" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_2.8_id.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#17#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_2.7.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#17#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_3.2.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_3.1.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_3.3.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -760,9 +613,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/listing_3.4.cpp">
+    <entry file="file:///usr/include/c++/v1/__mutex_base">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-232">
+          <caret line="120" column="28" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/boost/thread/shared_mutex.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE_1_0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_1.1.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_2.1.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1073">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_2.2.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="39" column="55" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_2.3.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1363">
+          <caret line="56" column="3" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_2.4.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_3.1.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_2.8_id.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_2.8.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_2.7.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_2.6.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-348">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_2.5.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_3.3.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1160">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_3.2.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_3.4.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
           <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
@@ -772,54 +752,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/listing_3.5.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-667">
-          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+        <state relative-caret-position="1140">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing_3.7.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/listing_3.6.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="36" column="76" selection-start-line="36" selection-start-column="76" selection-end-line="36" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#16#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/v1/__mutex_base">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-232">
-          <caret line="120" column="28" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
+        <state relative-caret-position="38">
+          <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/listing_3.9.cpp">
+    <entry file="file://$PROJECT_DIR$/listing_3.8.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+        <state relative-caret-position="639">
+          <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/listing_3.8.cpp">
+    <entry file="file://$PROJECT_DIR$/listing_3.7.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="755">
-          <caret line="62" column="38" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
+        <state relative-caret-position="1132">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing_3.9.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
@@ -828,47 +798,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/listing_3.10.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-202">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/listing_3.12.cpp">
+    <entry file="file:///usr/include/c++/v1/mutex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="290">
+          <caret line="574" column="0" selection-start-line="574" selection-start-column="0" selection-end-line="574" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/listing_3.11.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state relative-caret-position="96">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/boost/thread/shared_mutex.hpp">
+    <entry file="file://$PROJECT_DIR$/listing_3.12.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="957">
+          <caret line="76" column="3" selection-start-line="76" selection-start-column="3" selection-end-line="76" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/listing_3.13.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding>
-            <element signature="e#1#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1420">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>

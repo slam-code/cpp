@@ -61,7 +61,7 @@ int main()
 }
 /*如果不想等待线程结束,可以分离(detaching)线程,从而避免异常安全(exception-safety)问题。
  不过,这就打破了线程与 std::thread	 对象的联系,即使线程仍然在后台运行着,分离操作也能确保
- std::terminate()在 	std::thread	 对象销毁才被调用。
+ std::terminate()在 	std::thread	 对象销毁之后才被调用。
 
 使用detach()会让线程在后台运行,这就意味着主线程不能与之产生直接交互。也就是说,不
 会等待这个线程结束;如果线程分离,那么就不可能有 	std::thread	 对象能引用它,分离线程

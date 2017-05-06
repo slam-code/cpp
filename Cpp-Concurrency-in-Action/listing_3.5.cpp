@@ -3,7 +3,7 @@
 #include <mutex>
 #include <memory>
 
-struct empty_stack: std::exception ///默认的继承访问权限。struct是public的，class是private的。
+struct empty_stack: std::exception ///默认的继承访问权限:struct是public的，class是private的。
 {
     const char* what() const throw()
     {
@@ -48,7 +48,7 @@ public:
         value=data.top();
         data.pop();
     }
-    bool empty() const
+    bool empty() const//此处说明了为啥m需要 mutable.
     {
         std::lock_guard<std::mutex> lock(m);
         return data.empty();

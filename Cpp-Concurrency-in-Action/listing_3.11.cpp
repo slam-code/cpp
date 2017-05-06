@@ -24,15 +24,17 @@ void foo()
     }
     lk.unlock();
     resource_ptr->do_something();
-    /*http://blog.csdn.net/cncnlg/article/details/46635095
-这个版本有什么问题呢？成本太高，每个调用都去获取锁，单例创建好之后，其实已经没有必要获取锁了，
-并发情况下会导致其他线程因等待锁而被系统休眠，成本太高了。 那么，每次调用都加锁， 在获取锁之前再加一个if(m_Instance == nullptr)判断， 是否可行？
-想法很好，但是有严重的缺陷，来看看 m_Instance = new Singleton, 这个new操作是先分配一块空间，然后执行构造函数，相当于：
-pInstance = operator new(sizeof(Singleton)); // Step 1
+/*http://blog.csdn.net/cncnlg/article/details/46635095
+这个版本有什么问题呢？
+成本太高，每个调用都去获取锁，单例创建好之后，其实已经没有必要获取锁了，
+并发情况下会导致其他线程因等待锁而被系统休眠，成本太高了。
+那么，每次调用都加锁， 在获取锁之前再加一个if(m_Instance == nullptr)判断， 是否可行？
+想法很好，但是有严重的缺陷，来看看 m_Instance = new Singleton, 这个new操作是先分配一块空间，
+然后执行构造函数，相当于：pInstance = operator new(sizeof(Singleton)); // Step 1
 new (pInstance) Singleton; // Step 2
-如果一个线程执行到step 1时， 另一个线程发现 m_Instance != nullptr, 直接把 m_Instance 返回，而Step 2 还没来得及执行，返回的指针指向一块并没有构造好的空间…
-
-     * */
+如果一个线程执行到step 1时， 另一个线程发现 m_Instance != nullptr, 直接把 m_Instance 返回，
+而Step 2 还没来得及执行，返回的指针指向一块并没有构造好的空间…
+*/
 }
 
 /*
@@ -48,22 +50,14 @@ new (pInstance) Singleton; // Step 2
 
 
 
-
-
-
-
-
-
-
-
 /*
 C++标准委员会也认为条件竞争的处理很重要,所以C++标准库提供了std::once_flag	 和 	std::call_once 来处理这种情况。
- 比起锁住互斥量,并显式的检查指针,每个线程只需要使用std::call_once ,在std::call_once的结束时,就能安全的知道指
+ 比起锁住互斥量并显式的检查指针,每个线程只需要使用std::call_once ,在std::call_once的结束时,就能安全的知道指
 针已经被其他的线程初始化了。使用std::call_once比显式使用互斥量消耗的资源更少,特别是当初始化完成后。
- 下面的例子展示了与清单3.11中的同样的操作,这里使用std::call_once。
- 在这种情况下,初始化通过调用函数完成,同样这样操作使用类中的函
-数操作符来实现同样很简单。如同大多数在标准库中的函数一样,或作为函数被调用,或作
-为参数被传递, 	std::call_once	 可以和任何函数或可调用对象一起使用。
+
+下面的例子展示了与清单3.11中的同样的操作,这里使用std::call_once。
+在这种情况下,初始化通过调用函数完成,同样这样操作使用类中的函数操作符来实现同样很简单。
+如同大多数在标准库中的函数一样,或作为函数被调用,或作为参数被传递,std::call_once可以和任何函数或可调用对象一起使用。
  */
 
 std::shared_ptr<some_resource>	resource_ptr;
@@ -74,7 +68,7 @@ void	init_resource()
 }
 void	foo()
 {
-    std::call_once(resource_flag,init_resource);		//	可以完整的进行一次初始化
+    std::call_once(resource_flag,init_resource);//可以完整的进行一次初始化
     resource_ptr->do_something();
 }
 

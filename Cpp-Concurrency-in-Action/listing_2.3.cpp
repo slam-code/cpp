@@ -53,8 +53,8 @@ void f()
     do_something_in_current_thread();
 } //4
 
-/*当线程执行到4处时,局部对象就要被逆序销毁了。因此,thread_guard对象g是第一个被销
-毁的,这时线程在析构函数中被加入2(join)到原始线程中。即使do_something_in_current_thread抛出一个异常,
+/*当线程执行到4处时,局部对象就要被逆序销毁了。因此,thread_guard对象g是第一个被销毁的,
+ * 这时线程在析构函数中被加入2(join)到原始线程中。即使do_something_in_current_thread抛出一个异常,
 这个销毁依旧会发生。*/
 
 int main()

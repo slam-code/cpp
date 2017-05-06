@@ -37,7 +37,7 @@ void f()
     {
         do_something_in_current_thread();
     }
-    catch(...)//使用了 	try/catch	 块确保访问局部变量的线程退出后,函数才结束。
+    catch(...)//使用了 	try/catch	 块确保访问局部变量的t线程退出后,f函数才结束。
     {
         t.join();
         throw;
