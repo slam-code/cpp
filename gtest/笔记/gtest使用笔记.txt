@@ -1,0 +1,47 @@
+Google Test
+
+
+1. 自定义错误输出：
+
+ASSERT_EQ(x.size(), y.size()) << "Vectors x and y are of unequal length";
+
+for (int i = 0; i < x.size(); ++i) {
+  EXPECT_EQ(x[i], y[i]) << "Vectors x and y differ at index " << i;
+}
+
+
+2. ASSERT_* 与EXPECT_*系列的区别：
+
+ASSERT_TRUE(condition)  ASSERT_FALSE(condition) ASSERT失败导致当前case终止
+EXPECT_TRUE(condition)  EXPECT_FALSE(condition) EXPECT失败，打印错误，并继续执行当前case 在GTest中，二者的称呼为：Fatal assertion， Nonfatal assertion
+什么时候用ASSERT，什么时候用EXPECT呢？一般性的原则是，当你希望程序出错后继续运行，以便让代码暴露出更多的潜在错误的时候，使用EXPECT。当你认为某处出错后继续运行没有意义的时候，使用ASSERT。例如，某个对象如果为NULL，后面对它的引用会导致null pointer error，那么最好还是用ASSERT_NE(NULL, obj)。
+
+
+
+
+3. 比较运算符
+
+ASSERT_*, EXPECT_*都有：
+
+ASSERT_EQ， ASSERT_NE，ASSERT_LT，ASSERT_GT，ASSERT_LE，ASSERT_GE
+
+EXPECT_EQ， EXPECT_NE，EXPECT_LT，EXPECT_GT，EXPECT_LE，EXPECT_GE
+
+
+另外，GTEST还支持STRING的比较。相关函数有（以ASSERT为例）
+
+ASSERT_STREQ，ASSERT_STRNE，ASSERT_STRCASEEQ，ASSERT_STRCASENE
+
+
+4. TEST与TEST_F之间的区别
+
+TEST_F比TEST强一些的地方在于TEST_F实际上会生成一个新类，该类有SetUp和TearDown函数用于建立和销毁数据结构。
+
+同一个TestCase文件中不能混合使用TEST与TEST_F。
+For each test defined with TEST_F(), Google Test will:
+
+Create a fresh test fixture at runtime
+Immediately initialize it via SetUp() ,
+Run the test
+Clean up by calling TearDown()
+Delete the test fixture. Note that different tests in the same test case have different test fixture objects, and Google Test always deletes a test fixture before it creates the next one. Google Test does not reuse the same test fixture for multiple tests. Any changes one test makes to the fixture do not affect other tests.

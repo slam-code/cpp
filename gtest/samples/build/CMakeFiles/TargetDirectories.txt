@@ -1,0 +1,7 @@
+/home/shen/ClionProjects/gtest/samples/build/CMakeFiles/edit_cache.dir
+/home/shen/ClionProjects/gtest/samples/build/CMakeFiles/sample2_unittest.dir
+/home/shen/ClionProjects/gtest/samples/build/CMakeFiles/rebuild_cache.dir
+/home/shen/ClionProjects/gtest/samples/build/CMakeFiles/gtest.dir
+/home/shen/ClionProjects/gtest/samples/build/CMakeFiles/sample1_unittest.dir
+/home/shen/ClionProjects/gtest/samples/build/CMakeFiles/gtest_main.dir
+/home/shen/ClionProjects/gtest/samples/build/CMakeFiles/sdy_sample.dir

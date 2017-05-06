@@ -1,0 +1,8 @@
+ 
+# 忽略*.o和*.a文件
+ *.[oa] 
+ *.[out]
+build    #过滤整个build文件夹
+*.class    #过滤所有.class文件
+ 
+ 

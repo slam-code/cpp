@@ -1,0 +1,1 @@
+clang++    -lpthread -std=c++11 -w -fpermissive   CMakeFiles/gtest_main.dir/home/shen/ClionProjects/gtest/gtest_main.cc.o  -o gtest_main -rdynamic libgtest.a 
