@@ -1,0 +1,3 @@
+记录std的各种不易察觉的错误用法.不常见于各种教科书的tips
+包括erase().remove(),unique()...
+ 
