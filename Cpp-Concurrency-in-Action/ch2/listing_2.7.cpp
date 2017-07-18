@@ -5,18 +5,18 @@
 
 void do_work(unsigned id)
 {
-    printf("id= %d ,",id);
+    printf("id= %d ,", id);
 }
 
 void f()//量产线程,等待它们结束.
 {
     std::vector<std::thread> threads;
-    for(unsigned i=0;i<20;++i)
+    for (unsigned i = 0; i < 20; ++i)
     {
-        threads.push_back(std::thread(do_work,i));
+        threads.push_back(std::thread(do_work, i));
     }
-    std::for_each(threads.begin(),threads.end(),
-        std::mem_fn(&std::thread::join));
+    std::for_each(threads.begin(), threads.end(),
+                  std::mem_fn(&std::thread::join));
 }
 
 int main()

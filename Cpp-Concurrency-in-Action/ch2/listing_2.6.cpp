@@ -1,38 +1,44 @@
 #include <thread>
 #include <utility>
+#include <iostream>
 
 class scoped_thread//为了确保线程程序退出前完成.
 {
     std::thread t;
 public:
-    explicit scoped_thread(std::thread t_)://1
-        t(std::move(t_))///thread的拷贝赋值是delete的，但move不是。
+    explicit scoped_thread(std::thread t_) ://1
+            t(std::move(t_))///thread的拷贝赋值是delete的，但move不是。
     {
-        if(!t.joinable()) //2
+        if (!t.joinable()) //2
             throw std::logic_error("No thread");
     }
+
     ~scoped_thread()
     {
         t.join();//3
     }
-    scoped_thread(scoped_thread const&)=delete;
-    scoped_thread& operator=(scoped_thread const&)=delete;
+
+    scoped_thread(scoped_thread const &) = delete;
+
+    scoped_thread &operator=(scoped_thread const &)= delete;
 };
 
-void do_something(int& i)
+void do_something(int &i)
 {
     ++i;
+    std::cout<<i<<" ";
 }
 
 struct func
 {
-    int& i;
+    int &i;
 
-    func(int& i_):i(i_){}
+    func(int &i_) : i(i_)
+    {}
 
     void operator()()
     {
-        for(unsigned j=0;j<1000000;++j)
+        for (unsigned j = 0; j < 1000; ++j)
         {
             do_something(i);
         }
@@ -40,13 +46,17 @@ struct func
 };
 
 void do_something_in_current_thread()
-{}
+{
+    int local=0;
+    auto it=func(local);
+    it();
+}
 
 void f()
 {
-    int some_local_state;
+    int some_local_state=0;
     scoped_thread t(std::thread(func(some_local_state)));
-        
+
     do_something_in_current_thread();
 }
 

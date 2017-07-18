@@ -1,4 +1,4 @@
-include <thread>
+#include <thread>
 
 void do_something(int& i)
 {
@@ -51,7 +51,7 @@ int main()
 }
 
 /*
-调用join()的行为,清理了线程相关的存储部分,这样 	std::thread	 对象将不再与已经完成的线程有任何关联。
+调用join()的行为,清理了线程相关的存储部分,这样std::thread	对象将不再与已经完成的线程有任何关联。
 这意味着,只能对一个线程使用一次join();一旦已经使用过join(), std::thread对象就不能再次加入了,
 当对其使用joinable()时,将返回否(false)。
  * */
