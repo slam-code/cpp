@@ -6,5 +6,12 @@ build    #过滤整个build文件夹
 build/
 *.class    #过滤所有.class文件
 
+za 
+.idea 
+.zip
+orig
+backup
+ 
+.idea
  
  
