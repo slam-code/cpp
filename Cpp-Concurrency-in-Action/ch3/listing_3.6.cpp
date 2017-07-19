@@ -29,7 +29,7 @@ public:
 
     friend void swap(X& lhs, X& rhs)
     {
-        if(&lhs==&rhs) ///必须检查是否是同一对象。因为对同一mutex加锁多次可能导致未定义行为。！
+        if(&lhs==&rhs) ///必须检查是否是同一对象。因为对同一mutex加锁多次可能导致未定义行为。
             return;
         std::lock(lhs.m,rhs.m);///一次性锁住多个互斥量mutex
         std::lock_guard<std::mutex> lock_a(lhs.m,std::adopt_lock);

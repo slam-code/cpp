@@ -27,6 +27,5 @@ public:
 
 int main()
 {
-    //std::cout<<"ok 3.10\n";
     printf(" ok 3.10  ");
 }

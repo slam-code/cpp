@@ -22,6 +22,7 @@ public:
     threadsafe_stack(){}
     threadsafe_stack(const threadsafe_stack& other)
     {
+        //lock_guard说明了mutex需要mutable修饰的原因.
         std::lock_guard<std::mutex> lock(other.m);
         data=other.data;
     }
@@ -48,7 +49,7 @@ public:
         value=data.top();
         data.pop();
     }
-    bool empty() const//此处说明了为啥m需要 mutable.
+    bool empty() const
     {
         std::lock_guard<std::mutex> lock(m);
         return data.empty();

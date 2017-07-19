@@ -1,0 +1,11 @@
+
+add_executable(listing_3.1 listing_3.1.cpp)
+add_executable(listing_3.2 listing_3.2.cpp)
+add_executable(listing_3.3 listing_3.3.cpp)
+add_executable(listing_3.4 listing_3.4.cpp)
+add_executable(listing_3.5 listing_3.5.cpp)
+add_executable(listing_3.6 listing_3.6.cpp)
+add_executable(listing_3.7 listing_3.7.cpp)
+add_executable(listing_3.8 listing_3.8.cpp)
+add_executable(listing_3.9 listing_3.9.cpp)
+add_executable(listing_3.10 listing_3.10.cpp)

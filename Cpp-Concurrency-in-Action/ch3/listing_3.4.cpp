@@ -27,5 +27,5 @@ public:
 
 int main()
 {
-    printf("ok3.4\n");
+    printf("ok-3.4\n");
 }
