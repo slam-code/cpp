@@ -3,7 +3,7 @@
 #include <chrono>
 #include <iostream>
 std::condition_variable cv;
-bool done;
+bool done= false;
 std::mutex m;
 bool wait_loop()
 {
@@ -21,6 +21,8 @@ bool wait_loop()
 
 int main()
 {
+    done= true;
+    wait_loop();
     std::cout<<"(int)std::cv_status::no_timeout:"<<(int)std::cv_status::no_timeout<<std::endl;
     std::cout<<"(int)std::cv_status::timeout:"<<(int)std::cv_status::timeout<<std::endl;
 }

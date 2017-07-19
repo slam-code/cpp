@@ -4,8 +4,14 @@
 #include <queue>
 #include <iostream>
 
+int i=0;
 bool more_data_to_prepare()
 {
+    while (i<1000)
+    {
+        ++i;
+        return true;
+    }
     return false;
 }
 
@@ -26,10 +32,9 @@ bool is_last_chunk(data_chunk&)
 }
 /*C++标准库对条件变量有两套实现: 	std::condition_variable	 和 	std::condition_variable_any。
  * 这两个实现都包含在	<condition_variable>头文件的声明中。两者都需要与一个互斥量一起才能工作(互斥量是为了同步);
- * 前者仅限于与 	std::mutex	 一起工作,而后者可以和任何满足最低标准的互斥量一起工作,从而加上了_any的后缀。
- * 因为 	std::condition_variable_any 更加通用,这就可能从体积、性能,以及系统资源的使用方面产生额外的开销,
- * 所以 	std::condition_variable	 一般作为首选的类型,当对灵活性有硬性要求时,
- * 我们才会去考虑std::condition_variable_any	 。*/
+ * 前者仅限于与std::mutex一起工作,而后者可以和任何满足最低标准的互斥量一起工作,从而加上了_any的后缀。
+ * 因为std::condition_variable_any 更加通用,这就可能从体积、性能,以及系统资源的使用方面产生额外的开销,
+ * 所以std::condition_variable一般作为首选的类型,当对灵活性有硬性要求时,我们才会去考虑std::condition_variable_any。*/
 
 std::mutex mut;
 std::queue<data_chunk> data_queue;//在2个线程之间传递数据的队列
@@ -54,7 +59,7 @@ void data_processing_thread()
     while(true)
     {
         std::unique_lock<std::mutex> lk(mut);
-//只能unique_lock原因：等待中的线程必须在等待期间解锁互斥量，并在之后对互斥量再次上锁。  lock_guard做不到。
+//只能unique_lock原因：等待中的线程必须在等待期间解锁互斥量，并在之后对互斥量再次上锁。lock_guard做不到。
 //若采用lock_guard:互斥量在线程休眠期间保持【锁住状态】，准备数据的线程将无法对互斥量上锁，也无法添加数据到队列。
 // 如此，等待线程的条件便永远无法满足
         data_cond.wait(lk,[]{return !data_queue.empty();});
