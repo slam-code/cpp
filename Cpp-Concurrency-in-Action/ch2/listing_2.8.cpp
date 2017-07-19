@@ -29,7 +29,7 @@ T parallel_accumulate(Iterator first, Iterator last, T init)
     unsigned long const hardware_threads =
             std::thread::hardware_concurrency();
 
-    unsigned long const num_threads =
+    unsigned long const num_threads =//最终的线程数
             std::min(hardware_threads != 0 ? hardware_threads : 2, max_threads);
     //hardware_threads:2即当hardware_concurrency()返回0时选择2.
 
@@ -43,7 +43,7 @@ T parallel_accumulate(Iterator first, Iterator last, T init)
     {
         Iterator block_end = block_start;
         std::advance(block_end, block_size);
-        threads[i] = std::thread(
+        threads[i] = std::thread(  //thread[i]即为求block_start-block_end之间的和。
                 accumulate_block<Iterator, T>(),
                 block_start, block_end, std::ref(results[i]));
         block_start = block_end;

@@ -31,7 +31,8 @@ void foo()
 并发情况下会导致其他线程因等待锁而被系统休眠，成本太高了。
 那么，每次调用都加锁， 在获取锁之前再加一个if(m_Instance == nullptr)判断， 是否可行？
 想法很好，但是有严重的缺陷，来看看 m_Instance = new Singleton, 这个new操作是先分配一块空间，
-然后执行构造函数，相当于：pInstance = operator new(sizeof(Singleton)); // Step 1
+然后执行构造函数，相当于：
+pInstance = operator new(sizeof(Singleton)); // Step 1
 new (pInstance) Singleton; // Step 2
 如果一个线程执行到step 1时， 另一个线程发现 m_Instance != nullptr, 直接把 m_Instance 返回，
 而Step 2 还没来得及执行，返回的指针指向一块并没有构造好的空间…
@@ -61,13 +62,13 @@ C++标准委员会也认为条件竞争的处理很重要,所以C++标准库提�
 如同大多数在标准库中的函数一样,或作为函数被调用,或作为参数被传递,std::call_once可以和任何函数或可调用对象一起使用。
  */
 
-std::shared_ptr<some_resource>	resource_ptr;
+//std::shared_ptr<some_resource>	resource_ptr;
 std::once_flag	resource_flag;		//	1
 void	init_resource()
 {
     resource_ptr.reset(new	some_resource);
 }
-void	foo()
+void foo2()
 {
     std::call_once(resource_flag,init_resource);//可以完整的进行一次初始化
     resource_ptr->do_something();
