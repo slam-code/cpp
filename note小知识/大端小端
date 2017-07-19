@@ -1,0 +1,22 @@
+网络字节序是大端
+https://en.wikipedia.org/wiki/Endianness
+http://www.cnblogs.com/fuchongjundream/p/3914770.html
+http://www.cnblogs.com/freeliver54/archive/2011/09/23/2185808.html
+
+htobe64:那些函数（其实那些是宏定义），用来配置端口号是没有用的，因为已经有htons函数了。但在解决TCP粘包问题中，这些函数就可以派上用场了。
+解决TCP粘包问题的一个方法是，在每条消息的头部添加一个长度字段。每一个主机在发送消息前，都把长度转换成大端字节序存放
+转换成小端字节序也行，只要CS两端统一即可）。然后发送消息。对端在收到消息的长度字段后，就将其从大端字节序转换成主机字节序。
+这里存在一个问题，怎么将怎么将收到的字节流转换成大端字节序的整型变量。答案是用memcpy函数。在发送端将整型变量变成字节流也是用这个函数。
+    
+
+
+     //发送端
+    int len = htobe32(a);//根据a得到长度
+    char ch[10];
+    memcpy(ch, &len, sizeof(len) ); 
+
+        //接收端
+    int len;
+    char* message;
+    memcpy(&len, message, sizeof(len) );//
+    a = be32toh(len);
