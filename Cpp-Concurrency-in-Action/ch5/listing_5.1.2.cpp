@@ -1,6 +1,3 @@
-//
-// Created by shen on 16-11-6.
-//
 
 #include <iostream>                // std::cout
 #include <atomic>                // std::atomic_flag

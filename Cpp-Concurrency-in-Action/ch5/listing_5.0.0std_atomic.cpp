@@ -1,4 +1,5 @@
 
+#include <atomic>
 /*
  原子类型对象的主要特点就是从不同线程访问不会导致数据竞争(data race)。
  因此从不同线程访问某个原子对象是良性 (well-defined) 行为,

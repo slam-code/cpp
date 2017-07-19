@@ -1,6 +1,3 @@
-//
-// Created by shen on 16-11-6.
-//
 
 #include <iostream>              // std::cout
 #include <atomic>                // std::atomic, std::atomic_flag, ATOMIC_FLAG_INIT
@@ -22,15 +19,21 @@ void count1m(int id)
     // 如果某个线程率先执行完上面的计数过程，则输出自己的 ID.
     // 此后其他线程执行 test_and_set 是 if 语句判断为 false，
     // 因此不会输出自身 ID.
-    if (!winner.test_and_set()) {
+    if (!winner.test_and_set()) {//之前未被设置，返回true。
         std::cout << "thread #" << id << " won!\n";
     }
 };
 
 /*
-test_and_set() 函数检查 std::atomic_flag 标志，如果 std::atomic_flag 之前没有被设置过，
-则设置 std::atomic_flag 的标志，并返回先前该 std::atomic_flag 对象是否被设置过，如果之前
-std::atomic_flag 对象已被设置，则返回 true，否则返回 false。
+test_and_set() 函数检查 std::atomic_flag 标志
+(一):
+    1),如果 std::atomic_flag 之前没有被设置过，
+    2),则设置 std::atomic_flag 的标志，并返回先前该 std::atomic_flag 对象是否被设置过.
+
+(二):
+    1),如果之前std::atomic_flag 对象已被设置，则返回 true
+    2),否则返回 false。
+
 test-and-set 操作是原子的（因此 test-and-set 是原子 read-modify-write （RMW）操作）
 */
 

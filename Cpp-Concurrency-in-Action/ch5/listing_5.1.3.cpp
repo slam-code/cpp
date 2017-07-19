@@ -1,6 +1,3 @@
-//
-// Created by shen on 16-11-6.
-//
 
 #include <thread>
 #include <vector>
@@ -30,9 +27,9 @@ int main()
     }
 }
 
-/*http://www.cnblogs.com/haippy/p/3252056.html
+/*
 在上面的程序中，std::atomic_flag 对象 lock 的上锁操作可以理解为 lock.test_and_set(std::memory_order_acquire);
-(此处指定了 Memory Order，更多有关 Memory Order 的概念，我会在后续的文章中介绍)，
+(此处指定了 Memory Order，更多有关 Memory Order 的概念 )
 解锁操作相当与 lock.clear(std::memory_order_release)。
 在上锁的时候，如果 lock.test_and_set 返回 false，则表示上锁成功（此时 while 不会进入自旋状态），
 因为此前 lock 的标志位为 false(即没有线程对 lock 进行上锁操作)，但调用 test_and_set 后 lock 的标志位为 true，

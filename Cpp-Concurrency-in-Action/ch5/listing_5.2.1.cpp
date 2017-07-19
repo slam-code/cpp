@@ -1,6 +1,4 @@
-//
-// Created by shen on 16-11-6.
-//
+
 #include <atomic>
 
 int main()

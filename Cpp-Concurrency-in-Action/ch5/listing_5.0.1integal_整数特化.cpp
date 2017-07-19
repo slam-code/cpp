@@ -1,12 +1,9 @@
-//
-// Created by shen on 16-11-6.
-//
-/*
- * 另外，C++11 标准库 std::atomic 提供了针对整形(integral)和指针类型的特化实现，分别定义如下：
 
+/*
+另外，C++11 标准库 std::atomic 提供了针对整形(integral)和指针类型的特化实现，分别定义如下：
 针对整形(integal)的特化，其中 integal 代表了如下类型
- char, signed char, unsigned char, short, unsigned short, int, unsigned int,
- long, unsigned long, long long, unsigned long long, char16_t, char32_t, wchar_t：
+char, signed char, unsigned char, short, unsigned short, int, unsigned int,
+long, unsigned long, long long, unsigned long long, char16_t, char32_t, wchar_t：
  */
 template <> struct atomic<integral> {
     bool is_lock_free() const volatile;

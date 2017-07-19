@@ -1,6 +1,4 @@
-//
-// Created by shen on 16-11-6.
-//
+
 template <class T> struct atomic<T*> {
     bool is_lock_free() const volatile;
     bool is_lock_free() const;
