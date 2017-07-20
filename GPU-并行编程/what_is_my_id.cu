@@ -31,7 +31,7 @@
     extern __cuda_fake_struct blockIdx;
     #define cudaMemcpy
     #define  cudaMalloc
-    #define warpSize
+    #define warpSize 32
     #define cudaFree
 
     #define cudaMemcpyDeviceToHost
@@ -41,10 +41,11 @@ __global__ void what_is_my_id(unsigned int *const block, unsigned int *const thr
                               unsigned int *const wrap, unsigned int *calc_thread)
 {
     const unsigned int thread_idx = (blockIdx.x * blockDim.x) + threadIdx.x;
-    block[thread_idx] = blockIdx.x;
-    thread[thread_idx] = threadIdx.x;
-    wrap[thread_idx] = threadIdx.x / warpSize;
-    calc_thread[thread_idx] = thread_idx;
+
+    block[thread_idx] = blockIdx.x;           //线程块
+    thread[thread_idx] = threadIdx.x;         //线程在线程块中的index
+    wrap[thread_idx] = threadIdx.x / warpSize;//线程束
+    calc_thread[thread_idx] = thread_idx;     //线程的全局绝对索引
 };
 
 #define ARRAY_SIZE 128
@@ -58,6 +59,12 @@ unsigned int cpu_calc_thread[ARRAY_SIZE];
  * */
 int main()
 {
+/*    for (int i = 0; i < ARRAY_SIZE; ++i)
+    {
+        printf("cal_thread: %3d, block: %2u,wrap：%2u,thread:%3u\n",
+               cpu_calc_thread[i],cpu_block[i],cpu_warp[i],cpu_thread[i]);
+    }
+    printf("\n\n");*/
     const unsigned int num_blocks = 2;//线程块
     const unsigned int num_threads = 64;//每块的线程数
     char ch;
@@ -95,6 +102,7 @@ int main()
      * 3，一共有2块线程，
      * 4，每个线程块包含64个线程
      * 5，每个线程块的内部索引是0-63
+     * 一个线程块包含2个线程束
      * */
 
 }

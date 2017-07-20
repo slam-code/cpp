@@ -33,10 +33,10 @@
     extern __cuda_fake_struct threadIdx;
     extern __cuda_fake_struct blockIdx;
     extern __cuda_fake_struct gridDim;
-    #define cudaMemcpy
-    #define  cudaMalloc
+    #define void cudaMemcpy(void *dst, const void *src, size_t count, enum cudaMemcpyKind kind)
+    #define  void cudaMalloc(void **devPtr, size_t size)
     #define warpSize
-    #define cudaFree
+    #define cudaFree void cudaFree(void *devPtr)
 
     #define cudaMemcpyDeviceToHost
     //#define  dim3 struct dim3{int x;int y;int z ;}dim3;
@@ -46,7 +46,7 @@
 __global__ void what_is_my_id_2D_A(unsigned int *const block_x,
                                    unsigned int *const block_y,
                                    unsigned int *const thread,
-                                   unsigned int *calc_thread,
+                                   unsigned int *const calc_thread,
                                    unsigned int *const x_thread,
                                    unsigned int *const y_thread,
                                    unsigned int *const grid_dimx,
@@ -55,21 +55,35 @@ __global__ void what_is_my_id_2D_A(unsigned int *const block_x,
                                    unsigned int *const block_dimy
 )
 {
+    /*
+     *threadIdx.x; 某一具体线程在线程块x方向上的位置,x方向的偏移。
+     *threadIdx.y;
+     * blockIdx.x:线程块在线程网格的x方向的索引。
+     * blockIdx.y;线程块在线程网格的y方向的索引。
+     *
+     *blockDim.x;线程块的宽度,x方向的【线程】数量
+     *blockDim.y;线程块的高度,y方向的【线程】数量
+     * gridDim.x; 线程网格的宽度,x维度上【线程块】的数量
+     * gridDim.y; 线程网格的高度,y维度上【线程块】的数量
+     * */
+
     const unsigned int idx=(blockIdx.x*blockDim.x)+threadIdx.x;
     const unsigned  int idy=(blockIdx.y*blockDim.y)*threadIdx.y;
-    const unsigned int thread_idx=((gridDim.x*blockDim.x)*idy)+idx;
-    block_x[thread_idx]=blockIdx.x;
-    block_y[thread_idx]=blockIdx.y;
 
-    thread[thread_idx]=threadIdx.x;
+    //找出当前的行索引，乘以每一行的线程数，最后加上在x方向上的偏移。便是相对于整个线程网格的绝对线程索引。
+    const unsigned int thread_idx=((gridDim.x*blockDim.x)*idy)+idx;
+    block_x[thread_idx]=blockIdx.x;//线程在线程块的x方向的偏移
+    block_y[thread_idx]=blockIdx.y;//线程在线程块的y方向的偏移
+
+    thread[thread_idx]=threadIdx.x;//线程块x维度上的线程索引。
     calc_thread[thread_idx]=thread_idx;
     x_thread[thread_idx]=idx;
     y_thread[thread_idx]=idy;
-    grid_dimx[thread_idx]=gridDim.x;
-    block_dimx[thread_idx]=blockDim.x;
+    grid_dimx[thread_idx]=gridDim.x;   //线程网格x维度上线程块的数量
+    block_dimx[thread_idx]=blockDim.x; //一个线程块x维度上的线程数量
 
-    grid_dimy[thread_idx]=gridDim.y;
-    block_dimy[thread_idx]=blockDim.y;
+    grid_dimy[thread_idx]=gridDim.y;   //线程网格y维度上【线程块】的数量
+    block_dimy[thread_idx]=blockDim.y;//一个线程块y维度上的【线程】数量
 };
 
 #define ARRAY_SIZE_X 32
@@ -102,10 +116,11 @@ unsigned int cpu_block_dimy[ARRAY_SIZE_Y][ARRAY_SIZE_X];
 int main()
 {
 
-    const dim3 thread_rect(32,4);
-    const dim3 blocks_rect(1,4);
+    const dim3 thread_rect(32,4); //32*4=128个线程
+    const dim3 blocks_rect(1,4);  //长方形，每个线程块的排列方式。
 
-    const dim3 threads_square(16*8);
+    //或者:
+    const dim3 threads_square(16*8);//128个线程
     const dim3 blocks_square(2,2);
 
 
