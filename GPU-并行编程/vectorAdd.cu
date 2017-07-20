@@ -1,13 +1,3 @@
-/**
- * Copyright 1993-2012 NVIDIA Corporation.  All rights reserved.
- *
- * Please refer to the NVIDIA end user license agreement (EULA) associated
- * with this source code for terms and conditions that govern your use of
- * this software. Any use, reproduction, disclosure, or distribution of
- * this software and related documentation outside the terms of the EULA
- * is strictly prohibited.
- *
- */
 
 /**
  * Vector addition: C = A + B.
@@ -22,6 +12,7 @@
 // For the CUDA runtime routines (prefixed with "cuda_")
 #include <cuda_runtime.h>
 
+//#include <helper_cuda.h>
 /**
  * CUDA Kernel Device code
  *
@@ -159,6 +150,8 @@ main(void)
         }
     }
 
+    printf("Test PASSED\n");
+
     // Free device global memory
     err = cudaFree(d_A);
 
@@ -167,6 +160,7 @@ main(void)
         fprintf(stderr, "Failed to free device vector A (error code %s)!\n", cudaGetErrorString(err));
         exit(EXIT_FAILURE);
     }
+
     err = cudaFree(d_B);
 
     if (err != cudaSuccess)
@@ -174,6 +168,7 @@ main(void)
         fprintf(stderr, "Failed to free device vector B (error code %s)!\n", cudaGetErrorString(err));
         exit(EXIT_FAILURE);
     }
+
     err = cudaFree(d_C);
 
     if (err != cudaSuccess)
@@ -186,15 +181,6 @@ main(void)
     free(h_A);
     free(h_B);
     free(h_C);
-
-    // Reset the device and exit
-    err = cudaDeviceReset();
-
-    if (err != cudaSuccess)
-    {
-        fprintf(stderr, "Failed to deinitialize the device! error=%s\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
 
     printf("Done\n");
     return 0;
