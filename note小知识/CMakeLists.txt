@@ -12,4 +12,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -std=c++14 -lpthread  -stdlib=libc++  -
 
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -std=c++14 -lpthread ")
 
-add_executable(cppClass_InnerClass  cppClass_InnerClass内部类对外的访问权.cpp)
+add_executable(1cppClass_InnerClass  1cppClass_InnerClass内部类对外的访问权.cpp)
+add_executable(2coredump 2coredump产生的原因.cpp)
+add_executable(4_Endian 4_Endian-判断处理器使用的什么模式.cpp)
+add_executable(5_virtual 5_virtual_虚函数的实现机制.cpp)
+add_executable(6-vector 6-vector-构造函数.cpp)
+add_executable(6-simple_vector 6-simple_vector.cpp)
