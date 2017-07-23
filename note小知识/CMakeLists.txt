@@ -27,3 +27,6 @@ add_executable(7-function_point3 7-function_point3.cpp)
 add_executable(7-refer 8-refer函数传引用.cpp)
 add_executable(8-cpp_rvalue 8-cpp_rvalue右值.cpp)
 add_executable(9-pair 9-pair.cpp)
+
+#git commit -a -m"rename"
+#git push
