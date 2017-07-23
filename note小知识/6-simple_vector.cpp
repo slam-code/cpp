@@ -98,3 +98,5 @@ int main()
         }    
 }
 //http://blog.jobbole.com/105780/?utm_source=blog.jobbole.com&utm_medium=relatedPosts
+//http://stackoverflow.com/questions/12613428/stl-vector-moving-all-elements-of-a-vector
+//http://stackoverflow.com/questions/41307763/using-stdmove-with-vectors
