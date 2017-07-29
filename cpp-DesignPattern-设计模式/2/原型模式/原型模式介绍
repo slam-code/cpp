@@ -1,0 +1,17 @@
+
+https://www.zhihu.com/question/52610176 c++中如何正确实现克隆（原型）模式？
+
+
+
+http://blog.csdn.net/wuzhekai1985/article/details/6667020
+http://blog.csdn.net/xingkongfenqi/article/details/49929253
+https://zh.wikipedia.org/wiki/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F
+http://www.jellythink.com/archives/105
+http://www.cnblogs.com/jiese/p/3164428.html
+http://blog.csdn.net/lcl_data/article/details/8764228
+
+原型模式是创建型模式的一种,其特点在于通过“复制”一个已经存在的实例来返回新的实例,而不是新建实例。被复制的实例就是我们所称的“原型”，这个原型是可定制的。
+原型模式多用于创建复杂的或者耗时的实例，因为这种情况下，复制一个已经存在的实例使程序运行更高效；或者创建值相等，只是命名不一样的同类数据。
+
+原型模式（Prototype）-------用原型实例指定创建对象的种类，并通过拷贝这些原型创建新的对象。
+

@@ -1,0 +1,74 @@
+
+c++有拷贝构造函数。
+Object *object1 = new Object();
+Object *object2 = new Object(*object1);
+在构造函数里实现深拷贝即可。
+
+而网上的例子都是这样的
+Object *object1 = new Object();
+Object *object2 = object1->clone();
+
+请问网上例子这样做有什么好处？
+如何正确实现克隆模式内容？
+
+
+
+//-----------------
+Prototype 的意义在于，你拿到一个 Base* ，它指向某个 Derived 对象，你想克隆出 Derived 对象，但代码中不写出 Derived 的具体类型，因为有很多派生类，
+这种情况下你用构造函数是搞不定的，type-switch 是 bad smells 。另外，这里考虑 virtual 的性能损失是主次不分，构造对象需要分配内存，这开销比一次虚函数调用大多了。
+Prorobuf Message 就采用了 prototype 模式，你可以参考一下。
+
+Derived d;
+Base &b = d;
+Derived d2(b); // 试图用b所指向的d来复制构造出一个新的d2，但这是不可以的，因为b的类型是Base，而不是Derived。
+
+Derived d2(*(b.clone())); // 由于clone是virtual的，因此这里调用了Derived的clone返回了一个new出来的derived的对象的指针。
+
+
+ 
+现在的c++应该尽量避免raw pointer的使用，而应该使用智能指针。但是如果直接用智能指针是无法实现Prototype模式的（如他的后半部分代码所示）。可以这样：
+
+class Base
+{
+    public:
+    std::unique_ptr<Base> clone () { return std::make_unique<Base>(*doClone()); }
+    private:
+    virtual Base* doClone() { return new Base(*this); }
+};
+class Derived : public Base
+{
+    public:
+    std::unique_ptr<Derived> clone () { return std::make_unique<Derived>(*doClone()); }
+    private:
+    virtual Derived* doClone() { return new Derived(*this); }
+};
+注意，clone不是virtual的，而doClone是virtual和private的。使用这个class的人只能看到clone而看不到doClone，由此既实现了Prototype又避免了raw pointer的暴露。
+
+
+3
+现在已经不推荐拿裸指针乱搞了，而clone又没法做出返回智能指针的实现，
+//所以最好还是用拷贝构造函数+std::make_shared make_unique之类的东西来
+////如他的后半部分代码所示）：
+class Base
+{
+public:
+    virtual Base* clone();
+};
+
+class Derived : public Base
+{
+public:
+    virtual Derived* clone() override; //这是可以的,Derived*和Base*协变
+};
+
+class Base
+{
+public:
+    virtual shared_ptr<Base> clone();
+};
+
+class Derived : public Base
+{
+public:
+    virtual shared_ptr<Derived> clone() override; //这是不可以的，shared_ptr<Derived>和shared_ptr<Base>不协变
+};
