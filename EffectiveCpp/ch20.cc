@@ -1,45 +1,51 @@
-//
-// Created by shen on 16-9-19.
-//
-
-#ifndef EFFECTIVECPP_CH17_H
-#define EFFECTIVECPP_CH17_H
-
-#include <string>
+#include <all.h>
+#include <zconf.h>
 
 using namespace std;
 
-class Person {
+/*
+ * 用传递引用代替传值
+ * */
+class Person
+{
 public:
-    Person() { printf("person() \n"); };
+    Person()
+    { printf("person() \n"); };
 
-    virtual ~Person() { printf("~person() \n"); };
+    virtual ~Person()
+    { printf("~person() \n"); };
 private:
     string name = "name", address = "address";
 };
 
-class Student : public Person {
+class Student : public Person
+{
 public:
-    Student() { printf("student() \n"); }
+    Student()
+    { printf("student() \n"); }
 
-    ~Student() { printf("~student() \n"); };
+    ~Student()
+    { printf("~student() \n"); };
 private:
     string schoolName = "schoolname", schoolAddress = "schooladdress";
 };
 
 
-bool validateStudent(Student s) {
+bool validateStudent(Student s)
+{
     printf("--call valid  by value ...--\n");
     return 1;
 };           // function taking a Student by value
 
-bool validateStudent2(const Student &s) {
+bool validateStudent2(const Student &s)
+{
     printf("call valid2 by ref ...\n");
     return 1;
 };
 
 
-void f20() {
+void f20()
+{
     Student plato;
     bool platoIsOK = validateStudent(plato);
 /*
@@ -48,7 +54,7 @@ Person的拷贝构造函数，为什么Student的拷贝构造一定要调用Pers
 Student的拷贝构造函数,name, address, schoolName, schoolAddress的拷贝构造函数
  * */
     printf("\n");
-    sleep(2);
+    sleep(1);
     bool platoIsOK2 = validateStudent2(plato);
 /*
  * 首先以引用的方式传递，不会构造新的对象，避免了上述例子中6个构造函数的调用。
@@ -58,32 +64,47 @@ Student的拷贝构造函数,name, address, schoolName, schoolAddress的拷贝�
 }
 
 
-class Window {
+class Window
+{
 public:
-    string name() const { return string("win name"); }
+    string name() const
+    { return string("win name"); }
 
-    virtual void display() const {};
+    virtual void display() const
+    {};
 };
 
-class WindowsBars: public Window {
+class WindowsBars : public Window
+{
 public:
-    virtual void display() const {};
+    virtual void display() const
+    {};
 };
 
-void printwindow(Window w) {
+void printwindow(Window w)
+{
     cout << w.name();
     w.display();
 }
 
-void printwindow2(const Window& w) {
+void printwindow2(const Window &w)
+{
     cout << w.name();
     w.display();
 }
 
-void f200() {
+void f200()
+{
     WindowsBars wwbar;
     //printwindow(wwbar);//不正确，只调用基类构造函数，子类部分被截断了
     printwindow2(wwbar);
 }
 
-#endif //EFFECTIVECPP_CH17_H
+int main()
+{
+
+
+    f20();
+   // f200();
+    return 0;
+}

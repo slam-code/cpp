@@ -1,12 +1,13 @@
-#ifndef EFFECTIVECPP_CH3_H
-#define EFFECTIVECPP_CH3_H
 
 #include "all.h"
 
-namespace ch3 {
+/*
+ * 尽可能使用const
+ *
+ * */
     class Widget2;
 
-    char greeting[] = "sdy";
+    char greeting[] = "ch3";
     char *p = greeting;
     const char *pp = greeting;
     char *const ppp = greeting;
@@ -15,7 +16,8 @@ namespace ch3 {
     void f0(const Widget2 *pw); //2种方式作用相同。等价
     void f1(Widget2 const *pw);
 
-    void f2() {
+    void f2()
+    {
         std::vector<int> vec;
         const std::vector<int>::iterator iter = vec.begin();
         *iter = 10;  //ok,改变iter指向的内容
@@ -27,25 +29,30 @@ namespace ch3 {
     }
 
 
-    class Rational {
+    class Rational
+    {
     };
 
     const Rational operator*(const Rational &hls, const Rational &rhs);//返回const对象
 
 
     //p19
-    class TextBlock {
+    class TextBlock
+    {
     public:
-        TextBlock(std::string s) {
+        TextBlock(std::string s)
+        {
             text = s;
         }
 
-        const char &operator[](std::size_t position) const {
+        const char &operator[](std::size_t position) const
+        {
             std::cout << "\n调用const版本[]: ";
             return text[position];
         }
 
-        char &operator[](std::size_t position) {
+        char &operator[](std::size_t position)
+        {
             std::cout << "\n调用non-const版本[]: ";
             return text[position];
         }
@@ -54,7 +61,8 @@ namespace ch3 {
         std::string text;
     };
 
-    void f3() {
+    void f3()
+    {
         TextBlock tb("hello");
         std::cout << tb[0]; //重载了[]运算符
 
@@ -62,26 +70,34 @@ namespace ch3 {
         std::cout << ctb[1];
     }
 
-    void f4(const TextBlock &ctb) {
+    void f4(const TextBlock &ctb)
+    {
 //        ctb[0]='y'; //错误，ctb[0]返回const对象，故不能修改
 
-        std::cout<< ctb[0]<<ctb[1]<<ctb[2];
+        std::cout << ctb[0] << ctb[1] << ctb[2];
 
     };
 
-    void f5(TextBlock &tb) {
+    void f5(TextBlock &tb)
+    {
         tb[0] = 'Z'; //正确，tb[0]返回非const对象，string[0]可修改！
         //std::cout << std::endl<<tb[0]<<std::endl<<tb[1]<<std::endl<<tb[2];
-        std::cout<<tb[0]<<tb[1]<<tb[2]<<std::endl;
-        printf("%c ,%c ,",tb[0],tb[1]);
-        printf("%c ,%c ,",tb[2],tb[3]);
+        std::cout << tb[0] << tb[1] << tb[2] << std::endl;
+        printf("%c ,%c ,", tb[0], tb[1]);
+        printf("%c ,%c ,", tb[2], tb[3]);
     }
 
-    // const转型
 
+int main()
+{
 
+    f3();
+    TextBlock tb("hello");
+
+    f4(tb);
+
+    f5(tb);
+    
+    return 0;
 }
-
-#endif
-
 
