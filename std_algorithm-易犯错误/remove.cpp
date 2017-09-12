@@ -30,6 +30,7 @@ void test1()
  移除[first, last)范围内等于val的元素
  但这个函数只是把val移到vec的末尾，并不真正删除.
  真正删除还是要调用一次erase函数
+ 
 */
     array.erase(itremove,array.end());
     for( int i:array)

@@ -34,7 +34,8 @@ int main()
 
     
 
-    std::vector<timestamp> timedeque{timestamp(10),timestamp(20),timestamp(20),timestamp(20),timestamp(30),timestamp(30),timestamp(40),timestamp(50),timestamp(60)};
+    std::vector<timestamp> 
+    timedeque{timestamp(10),timestamp(20),timestamp(20),timestamp(20),timestamp(30),timestamp(30),timestamp(40),timestamp(50),timestamp(60)};
 
     auto start =
     std::lower_bound(timedeque.begin(), timedeque.end(), timestamp(25),

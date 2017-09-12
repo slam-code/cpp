@@ -11,6 +11,7 @@ int main()
               << "distance(last, first) = "
               << std::distance(v.end(), v.begin()) << '\n';
 }
+
 /*
 distance(first, last) = 3
 distance(last, first) = -3

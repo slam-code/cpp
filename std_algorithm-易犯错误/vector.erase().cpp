@@ -2,6 +2,7 @@
 #include <algorithm>    // std::unique, std::distance
 #include <vector>       // std::vector
 using namespace std;
+
 /*
 ector::erase()：从指定容器删除指定位置的元素或某段范围内的元素
 vector::erase()方法有两种重载形式
