@@ -4,6 +4,8 @@
  *.[out]
 build    #过滤整个build文件夹
 build/
+useful
+useful 
 *.class    #过滤所有.class文件
 
 za 
