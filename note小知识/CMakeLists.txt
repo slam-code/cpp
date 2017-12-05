@@ -1,14 +1,14 @@
-cmake_minimum_required(VERSION 3.6)
+cmake_minimum_required(VERSION 3.0)
 
 
 project(Cpp_note)
 
 SET (CMAKE_C_COMPILER  "/usr/bin/clang")
-SET(CMAKE_CXX_COMPILER "clang++")
-#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -std=c++14 -lpthread    ")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -std=c++14 -lpthread  -stdlib=libc++  -lc++abi    ")
+#SET(CMAKE_CXX_COMPILER "clang++")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -std=c++14    -g    ")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -std=c++14 -lpthread -g -stdlib=libc++  -lc++abi    ")
 
-#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -stdlib=libc++ -std=c++14  -lc++abi  -lboost_thread -lboost_system ")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -stdlib=libc++ -std=c++14 -g  -lc++abi  -lboost_thread -lboost_system ")
 
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -std=c++14 -lpthread ")
 
@@ -27,6 +27,7 @@ add_executable(7-function_point3 7-function_point3.cpp)
 add_executable(7-refer 8-refer函数传引用.cpp)
 add_executable(8-cpp_rvalue 8-cpp_rvalue右值.cpp)
 add_executable(9-pair 9-pair.cpp)
+add_executable(11-include 11-include循环引用.cpp 11-include-a.cc 11-include-b.cc)
 
 #git commit -a -m"rename"
 #git push
